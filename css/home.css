@@ -1,0 +1,214 @@
+/*
+Introdução ao Desenvolvimento Web
+Grupo 3 - Hortifruti
+
+Alunos:
+Giovanna Gonçalves Cutieri - 10295197
+Pedro Ramos Cunha - 10892248
+André Gustavo Jucovski - 9783272
+Armando Akio Morey Filho - 8485632
+Yan Crisostomo Rohwedder - 9779263
+*/
+
+*{
+	background: #394e42;
+	color: #6a7373;
+	font-style: "courier new";
+	font-size: 18px;
+}
+
+h1{
+	background: #1b3130;
+	font-style: "pacifico";
+	font-size: 30px;
+	padding: 15px;
+}
+
+h2{
+	background: #96744f;
+	color: #313631;
+	font-style: "montserrat", "geneva";
+	font-size: 20px;
+	padding: 7px;
+	text-align: left;
+	width: 30%;
+	position: relative;
+		top: -20px;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+
+h3{
+	/*background: #313631;*/
+	font-size: 20px;
+	color: #b4b9b9;
+}
+
+a{
+	display: inline;
+	text-decoration: none;
+	background-color: #1b3130;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+header h1{
+	margin-top: 0px;
+}
+
+body{
+	margin: 0px;
+}
+
+
+
+/*HEADER*/
+header{
+	background: #1b3130;
+	height: 140px;
+	width: auto;
+	margin: 0;
+}
+
+/*menu*/
+nav#menu{
+	background: #1b3130;
+	font-size: 23px;
+}
+
+ul{
+	background: #1b3130;
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+}
+
+ul#left{
+	float: left;
+}
+
+ul#right{
+	float: right;
+}
+
+li{
+	background: #1b3130;
+	display: inline;
+	width: auto;
+	padding: 15px;
+}
+
+ul#left li{
+	float: left;
+}
+
+ul#right li{
+	float: right;
+}
+
+/*carrossel*/
+#carrossel{
+	height: 400px;
+	width: auto;
+	background-image: url("../imagens/hortifruti.jpg");
+	background-size: cover;
+	margin: 0px;
+}
+
+#textbox{
+	height: 260px;
+	width: 400px;
+	margin: 0px 100px 100px 100px;
+	text-align: center;
+	vertical-align: 100px;
+	opacity: 70%;
+	position: relative;
+		top: 17%;
+}
+
+#text{
+	font-size: 20px;
+	display: inline-block;
+	color: #b4b9b9;
+}
+
+
+
+/*DESTAQUES*/
+#destaques{
+	width: 100%;
+	text-align: center;
+}
+
+.card{
+	/*background: #313631;*/
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-width: 250px;
+	margin: 2%;
+	text-align: center;
+}
+
+.card img{
+	width: 100%;
+}
+
+.price{
+	/*background: #313631;*/
+	color: #b4b9b9;
+	font-size: 16px;
+}
+
+.card button{
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: #b4b9b9;
+	background-color: #313631; /*#1e211e;*/
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	position: relative;
+		bottom: -18px;
+
+}
+
+.card button:hover{
+	opacity: 0.7;
+}
+
+
+
+/*DIAGRAMA*/
+#diagrama{
+	height: 600px;
+	width: auto;
+	text-align: center;
+}
+
+
+
+/*RODAPÉ*/
+footer{
+	height: 200px;
+	width: auto;
+	background: #1b3130;
+}
+
+p#about{
+	padding: 10px;
+	background: #1b3130;
+}
+
+#imgFooter{
+	background: #1b3130;
+	vertical-align: middle;
+	padding: 20px;
+	height: 200px;
+	width: 350px;
+	float: right;
+}
