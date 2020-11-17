@@ -1,0 +1,21 @@
+/*
+Introdução ao Desenvolvimento Web
+Grupo 3 - Hortifruti
+
+Alunos:
+Giovanna Gonçalves Cutieri - 10295197
+Pedro Ramos Cunha - 10892248
+André Gustavo Jucovski - 9783272
+Armando Akio Morey Filho - 8485632
+Yan Crisostomo Rohwedder - 9779263
+*/
+
+.cart {
+	color: #b4b9b9;
+	padding-top: 25px;
+	padding-bottom: 100px;
+}
+
+#finalizar {
+	margin-top: 30px;
+}

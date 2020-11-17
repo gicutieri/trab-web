@@ -1,0 +1,262 @@
+<!--
+   Introdução ao Desenvolvimento Web
+   Grupo 3 - Hortifruti
+   
+   Alunos:
+   Giovanna Gonçalves Cutieri - 10295197
+   Pedro Ramos Cunha - 10892248
+   André Gustavo Jucovski - 9783272
+   Armando Akio Morey Filho - 8485632
+   Yan Crisostomo Rohwedder - 9779263
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Hortifruti - Loja</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/blog/">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<link href="css/loja.css" rel="stylesheet">
+
+	<script src="/js/login.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar navbar-dark bg-fundo-escuro shadow-sm">
+			<div class="container d-flex justify-content-between">
+				<a id="logo" href="/home.html" class="navbar-brand d-flex align-items-center">
+					<strong>Hortifruti</strong>
+				</a>
+			</div>
+		</div>
+
+    <nav class=" navbar navbar-expand navbar-light bg-fundo-escuro">
+      <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-custom" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/home.html">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/loja.html">LOJA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/receitas.html">RECEITAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/carrinho.html">CARRINHO</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="p-2 nav-item">
+            <a class="btn btn-sm btn-outline-light" href="/cadastro.html">SIGN UP</a>
+          </li>
+          <li class="p-2 nav-item">
+						<div class="dropdown">
+							<button class="btn btn-sm btn-outline-light btn-primary dropdown-toggle" type="button" data-toggle="dropdown">LOGIN
+								<span class="caret"></span></button>
+
+							<form name="login" class="dropdown-menu" method="POST">
+								<input id="user_username" name="user_username" type="text" placeholder="Nome"/>
+								<input id="user_password" name="user_password" type="password" placeholder="Senha"/>
+								<input id="user_remember" type="checkbox" value="1"/>
+									<label class="string optional" for="user_remember" style="color: white; font-size: 14px; position: relative; bottom: 6px;"> Remember me</label>
+
+								<input id="login_button" type="submit" value="SIGN IN" onclick="validar()">
+							</form>
+						</div>
+          </li>
+        </ul>
+      </div>
+
+			<!-- <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+				<div class="p-2">
+					<a class="btn btn-sm btn-outline-light" href="#">SIGN UP</a>
+				</div>
+				<div class="p-2">
+					<a class="btn btn-sm btn-outline-light" href="#">LOGIN</a>
+				</div>
+			</div> -->
+      </div>
+    </nav>
+  </header>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../imagens/hortifruti.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../imagens/hortifruti2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../imagens/hortifruti3.jpg" alt="Second slide">
+      </div>
+    </div>
+  </div>
+
+	<main role="main">
+
+		<div class="marcado py-4 search-bar">
+     		<h2>
+				<div class="row">
+					<input class="text-line search-bar" type="text" placeholder="search">
+					<button class="searchbar-button"><span><i class="fa fa-search"></i></span></button>
+				</div>
+			</h2>
+        </div>
+		
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="card">
+						<img src="/imagens/abacate.jpg" class="card-img-top" alt="..." />
+						<div class="card-body">
+							<h3 class="card-title">Abacate</h3>
+							<h5>R$3,00</h5>
+						</div>
+						<button>Adicionar ao Carrinho</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+
+		<div id="buttons">
+			<button class="btn btn-md btn-outline-light" style="margin-right: 2%;">
+				<span><i class="fa fa-arrow-left"></i></span>
+			</button>
+
+			<button class="btn btn-md btn-outline-light"> 1 </button>
+
+			<button class="btn btn-md btn-outline-light" style="margin-left: 2%;">
+				<span><i class="fa fa-arrow-right"></i></span>
+			</button>
+		</div>
+
+
+	</main>
+		  
+  <footer>
+    <div class="container">
+		<a name="sobre"></a>
+		<h2>QUEM SOMOS NÓS</h2>
+		<img id="imgFooter" src="/imagens/modern_family.jpg">
+		<p id="about">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
+			Entre em contato com a gente:<br><br>
+			www.hortifruti.com.br<br>
+			@hortifruti<br>
+			hortifruti@email.com<br><br><br>
+			Copyright © Hortifruti 2020
+		</p>
+    </div>
+  </footer>
+</body>
+</html>

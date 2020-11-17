@@ -1,0 +1,119 @@
+/*
+Introdução ao Desenvolvimento Web
+Grupo 3 - Hortifruti
+
+Alunos:
+Giovanna Gonçalves Cutieri - 10295197
+Pedro Ramos Cunha - 10892248
+André Gustavo Jucovski - 9783272
+Armando Akio Morey Filho - 8485632
+Yan Crisostomo Rohwedder - 9779263
+*/
+
+@import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap);
+
+#logo {
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+}
+
+[role=main] {
+  background-image: url(../imagens/Background.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+
+}
+
+.bg-fundo-escuro {
+  background: #1b3130;
+}
+
+.card {
+  background: #44554B;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-bottom: 20%;
+}
+
+.card-body h3,h5 {
+  color: #b4b9b9;
+}
+
+.card button {
+  background: #313631;
+  color: #b4b9b9;
+  border: none;
+  font-size: 16px;
+  padding: 13px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #6a7373;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.carousel-inner {
+  background-size: cover; 
+  height: 400px;
+}
+
+#descricao-producao {
+	color: #b4b9b9;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-bottom: 10%;
+	font-size: 16px;
+}
+
+footer p {
+  margin-bottom: 0px !important;
+}
+
+footer {
+  padding: 10px;
+  color: #6a7373;
+  background-color: #f9f9f9;
+  background: #1b3130;
+}
+
+#imgFooter {
+  background: #1b3130;
+  vertical-align: middle;
+  padding: 20px;
+  height: 200px;
+  width: 350px;
+  float: right;
+}
+
+.marcado h2  {
+  background: #96744f;
+  font-size: 25px;
+  padding: 7px;
+}
+
+.search-bar {
+	opacity: 70%;
+}
+
+.text-line {
+	background-color: transparent;
+	color: #313631;
+	outline: none;
+	outline-style: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid #313631 1px;
+	padding: 3px 5px;
+	font-size: 20px;
+	margin-left: 10%;
+	width: 75%
+}
