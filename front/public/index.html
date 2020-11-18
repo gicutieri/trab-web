@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <title>Hortifruti</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-fundo-escuro shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a id="logo" href="/home.html" class="navbar-brand d-flex align-items-center">
+            <strong>Hortifruti</strong>
+          </a>
+        </div>
+      </div>
+  
+      <nav class=" navbar navbar-expand navbar-light bg-fundo-escuro">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse navbar-custom" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/home.html">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/loja.html">LOJA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">SOBRE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/receitas.html">RECEITAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/carrinho.html">CARRINHO</a>
+              </li>
+            </ul>
+    
+            <ul class="navbar-nav ml-auto">
+              <li class="p-2 nav-item">
+                <a class="btn btn-sm btn-outline-light" href="/cadastro.html">SIGN UP</a>
+              </li>
+              <li class="p-2 nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-sm btn-outline-light btn-primary dropdown-toggle" type="button" data-toggle="dropdown">LOGIN
+                    <span class="caret"></span></button>
+    
+                  <form name="login" class="dropdown-menu" method="POST">
+                    <input id="user_username" name="user_username" type="text" placeholder="Nome"/>
+                    <input id="user_password" name="user_password" type="password" placeholder="Senha"/>
+                    <input id="user_remember" name="user_remember" type="checkbox" value="1"/>
+                      <label class="string optional" for="user_remember" style="color: white; font-size: 14px; position: relative; bottom: 6px;"> Remember me</label>
+    
+                    <input id="login_button" type="submit" value="SIGN IN" onclick="validar()">
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- TODO exportar para componente -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../assets/images/hortifruti.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../assets/images/hortifruti2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../assets/images/hortifruti3.jpg" alt="Second slide">
+        </div>
+      </div>
+    </div>
+
+
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <footer>
+      <div class="container">
+      <a name="sobre"></a>
+      <h2>QUEM SOMOS NÓS</h2>
+      <img id="imgFooter" src="../imagens/modern_family.jpg">
+      <p id="about">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><br>
+        Entre em contato com a gente:<br><br>
+        www.hortifruti.com.br<br>
+        @hortifruti<br>
+        hortifruti@email.com<br><br><br>
+        Copyright © Hortifruti 2020
+      </p>
+      </div>
+    </footer>
+  </body>
+</html>
