@@ -53,11 +53,16 @@
 
             <ul class="navbar-nav ml-auto">
               <li class="p-2 nav-item">
-                <a class="btn btn-sm btn-outline-light" href="/cadastro.html">SIGN UP</a>
+                <router-link
+                  class="btn btn-sm btn-outline-light"
+                  active-class="active"
+                  exact
+                  :to="{ name: 'Cadastro' }">
+                  SIGN UP</router-link>
               </li>
               <li class="p-2 nav-item">
                 <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-light btn-primary dropdown-toggle" type="button" data-toggle="dropdown">LOGIN
+                  <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">LOGIN
                     <span class="caret"></span></button>
 
                   <form name="login" class="dropdown-menu" method="POST">

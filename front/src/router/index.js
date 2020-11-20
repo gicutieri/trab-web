@@ -20,13 +20,19 @@ const routes = [
     path: '/sobre',
     name: 'Sobre',
     component: () => import("@/views/Sobre"),
-    meta: { title: 'Hortifruti - sobre' }
+    meta: { title: 'Hortifruti - Sobre' }
   },
   {
     path: '/carrinho',
     name: 'Carrinho',
     component: () => import("@/views/Carrinho"),
     meta: { title: 'Hortifruti - Carrinho' }
+  },
+  {
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: () => import("@/views/Cadastro"),
+    meta: { title: 'Hortifruti - Cadastro' }
   }
 ]
 
