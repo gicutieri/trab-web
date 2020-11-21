@@ -21,7 +21,7 @@
           <template #button-content>
             <img src="@/assets/Header/signvec.svg" alt="">
           </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item :to="{name : 'Cadastro'}">Profile</b-dropdown-item>
           <b-dropdown-item href="#">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -40,6 +40,7 @@ export default {
 <style scoped>
   .nav-item{
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
   }
   .navbar-nav .nav-link {
     color: #AF7061;

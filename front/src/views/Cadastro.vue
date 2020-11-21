@@ -1,6 +1,7 @@
 <template>
   <div class="cadastro">
-    <div class="container">
+    <body>
+            <div class="container">
         <div class="row">
             <div class="col-sm-6 marcado py-4">
                 <h2>Cadastro</h2>
@@ -68,17 +69,17 @@
             </fieldset>
 
             <fieldset>
-                <legend>Endereço de Entrega</legend>
+                <legend>Endereï¿½o de Entrega</legend>
                 
                 <div class="form-group form-inline">
-                    <label class="col-md-2 control-label" for="rua">Endereço *</label>
+                    <label class="col-md-2 control-label" for="rua">Endereï¿½o *</label>
                     <div class="col-md-8">
                         <input id="rua" type="text" name="user_rua" class="form-control input-md" size="80" required/>
                     </div>
                 </div>
                     
                 <div class="form-group form-inline">
-                    <label class="col-md-2 control-label" for="n">Número *</label>
+                    <label class="col-md-2 control-label" for="n">Nï¿½mero *</label>
                     <div class="col-md-4">
                         <input id="n" type="number" name="user_n" class="form-control input-md" required/>
                     </div>
@@ -118,7 +119,7 @@
                 <legend><br>Dados de Login<br></legend>
             
                 <div class="form-group form-inline">
-                    <label class="col-md-2 control-label" for="usuario">Nome de Usuário *</label>
+                    <label class="col-md-2 control-label" for="usuario">Nome de Usuï¿½rio *</label>
                     <div class="col-md-4">
                         <input id="usuario" type="text" name="user_usuario" class="form-control input-md" required/>
                     </div>
@@ -130,7 +131,7 @@
                 </div>
 
                 <div class="form-group form-inline">
-                    <label class="col-md-2 control-label" for="usuario2">Confirmar Usuário *</label>
+                    <label class="col-md-2 control-label" for="usuario2">Confirmar Usuï¿½rio *</label>
                     <div class="col-md-4">
                         <input id="usuario2" type="text" name="user_usuario2" class="form-control input-md" required/>
                     </div>
@@ -153,6 +154,8 @@
             </div>
         </form>
     </div>
+    </body>
+
   </div>
 </template>
 
@@ -164,5 +167,11 @@ export default {
 </script>
 
 <style scoped>
-
+body{
+    background-image: url("~@/assets/Body/Background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1125px;
+  }
 </style>

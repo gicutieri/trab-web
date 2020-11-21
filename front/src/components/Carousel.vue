@@ -1,18 +1,27 @@
 <template>
-  <div class="carousel">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="d-block w-100" src="@/assets/Carousel/hortifruti.jpg" alt="First slide">
-            </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="@/assets/Carousel/hortifruti2.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="@/assets/Carousel/hortifruti3.jpg" alt="Second slide">
-            </div>
-        </div>
-    </div>
+  <div>
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width="1024"
+      img-height="200"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <b-carousel-slide img-src="@/assets/Carousel/Home1.png">
+        <h1>PRODUÇÃO FAMILIAR</h1>
+      </b-carousel-slide>
+      <b-carousel-slide img-src="@/assets/Carousel/Home2.png">
+        <h1>COLHIDOS COM AMOR</h1>
+      </b-carousel-slide>
+      <b-carousel-slide img-src="@/assets/Carousel/Home3.png">
+        <h1>HIGIENIZADOS</h1>
+      </b-carousel-slide>
+    </b-carousel>
   </div>
 </template>
 
@@ -21,7 +30,12 @@ export default {
   name: 'Carousel'
 }
 </script>
-
+  
 <style scoped>
-
+  div.carousel-caption *{
+    color:white;
+    background: rgba(70, 38, 38, 0.651);
+    max-width: max-content;
+    font-size: 4vw;
+  }
 </style>

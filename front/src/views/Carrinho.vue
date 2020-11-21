@@ -1,6 +1,7 @@
 <template>
   <div class="carrinho">
-    <div class="container">
+  <body>
+            <div class="container">
       <div class="row">
         <div class="col-md-8">
           <div class="marcado py-4">
@@ -106,7 +107,9 @@
         </div>
       </div> <!-- <div class="row"> -->
     </div> <!-- <div class="container"> -->
-  </div> <!-- <div class="carrinho"> -->
+  </body>
+  </div>
+
 </template>
 
 <script>
@@ -117,10 +120,11 @@ export default {
 </script>
 
 <style scoped>
-  .carrinho{
+  body{
     background-image: url("~@/assets/Body/Background.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1125px;
   }
 </style>

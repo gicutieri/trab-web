@@ -1,8 +1,7 @@
 <template>
   <div class="loja">
-    <Carousel/>
-
-    <div class="container">
+    <body>
+          <div class="container">
       <div class="marcado py-4 search-bar">
         <div class="row">
           <input class="text-line search-bar" type="text" placeholder="search">
@@ -37,27 +36,28 @@
       </div>
 
     </div> <!-- <div class="container"> -->
+    </body>
+
   </div> <!-- <div class="loja"> -->
 </template>
 
 <script>
-import Carousel from '@/components/Carousel.vue'
 import Card from '@/components/Card.vue'
 
 export default {
   name: 'Loja',
   components: {
-    Carousel,
     Card
   }
 }
 </script>
 
 <style scoped>
-  .loja{
-    background-image: url("~@/assets/Body/Background.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  }
+  body{
+      background-image: url("~@/assets/Body/Background.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 1125px;
+    }
 </style>
