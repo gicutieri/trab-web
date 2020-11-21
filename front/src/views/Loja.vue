@@ -54,5 +54,10 @@ export default {
 </script>
 
 <style scoped>
-
+  .loja{
+    background-image: url("~@/assets/Body/Background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 </style>

@@ -1,86 +1,34 @@
 <template>
-  <div class="header">
-    <header>
-      <div class="navbar navbar-dark bg-fundo-escuro shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <router-link id="logo" class="navbar-brand d-flex align-items-center" :to="{ name: 'Home' }">
-            <strong>Hortifruti</strong>
-          </router-link>
-        </div>
-      </div>
+  <header>
+<div>
+  <b-navbar toggleable="lg">
+    <b-navbar-brand href="#"><img src="@/assets/Header/LogoYBY.svg" class="img-logo" alt=""></b-navbar-brand>
 
-      <nav class=" navbar navbar-expand navbar-light bg-fundo-escuro">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-          <div class="collapse navbar-collapse navbar-custom" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">                
-                <router-link
-                  class="nav-link"
-                  active-class="active"
-                  exact
-                  :to="{ name: 'Home' }">
-                  Home</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link
-                  class="nav-link"
-                  active-class="active"
-                  exact
-                  :to="{ name: 'Loja' }">
-                  Loja</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link
-                  class="nav-link"
-                  active-class="active"
-                  exact
-                  :to="{ name: 'Sobre' }">
-                  Sobre</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link
-                  class="nav-link"
-                  active-class="active"
-                  exact
-                  :to="{ name: 'Carrinho' }">
-                  Carrinho</router-link>
-              </li>
-            </ul>
+    <b-collapse id="nav-collapse" is-nav>
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+        <b-navbar-nav>
+          <b-nav-item :to="{ name: 'Home' }">HOME</b-nav-item>
+          <b-nav-item :to="{ name: 'Loja' }">LOJA</b-nav-item>
+          <b-nav-item :to="{ name: 'Sobre' }">SOBRE</b-nav-item>
+          <b-nav-item :to="{ name: 'Carrinho' }">CARRINHO</b-nav-item>
+        </b-navbar-nav>
 
-            <ul class="navbar-nav ml-auto">
-              <li class="p-2 nav-item">
-                <router-link
-                  class="btn btn-sm btn-outline-light"
-                  active-class="active"
-                  exact
-                  :to="{ name: 'Cadastro' }">
-                  SIGN UP</router-link>
-              </li>
-              <li class="p-2 nav-item">
-                <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">LOGIN
-                    <span class="caret"></span></button>
-
-                  <form name="login" class="dropdown-menu" method="POST">
-                    <input id="user_username" name="user_username" type="text" placeholder="Nome"/>
-                    <input id="user_password" name="user_password" type="password" placeholder="Senha"/>
-                    <input id="user_remember" name="user_remember" type="checkbox" value="1"/>
-                      <label class="string optional" for="user_remember" style="color: white; font-size: 14px; position: relative; bottom: 6px;"> Remember me</label>
-
-                    <input id="login_button" type="submit" value="SIGN IN" onclick="validar()">
-                  </form>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-  </div>
+        <b-nav-item-dropdown right>
+          <!-- Using 'button-content' slot -->
+          <template #button-content>
+            <img src="@/assets/Header/signvec.svg" alt="">
+          </template>
+          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>
+  </header>
 </template>
 
 <script>
@@ -90,5 +38,38 @@ export default {
 </script>
 
 <style scoped>
-
+  .nav-item{
+    font-size: 20px;
+  }
+  .navbar-nav .nav-link {
+    color: #AF7061;
+  }
+  .nav-item-dropdown {
+    color: #AF7061;
+  }
+  .navbar-light{
+  background: #325E47;
+  color: #AF7061;
+  }
+  .img-logo{
+    height: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .navbar-brand {
+    display: inline-block;
+    max-width:50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+  @media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
 </style>

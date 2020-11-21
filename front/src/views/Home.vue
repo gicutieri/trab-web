@@ -2,7 +2,7 @@
   <div class="home">
     <Carousel/>
 
-    <div class="container">
+    <div class="container back">
       <div class="row">
         <div class="col-sm-6 marcado py-4">
           <h2>Destaques</h2>
@@ -55,5 +55,10 @@ export default {
 </script>
 
 <style scoped>
-
+  .back{
+    background-image: url("~@/assets/Body/Background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </style>

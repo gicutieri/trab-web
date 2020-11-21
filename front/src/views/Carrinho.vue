@@ -85,10 +85,10 @@
             </div>
             <div class="row">
               <div class="col-sm-6">Envio</div>
-              <div class="col-sm-6 text-lg-right">Grátis</div>
+              <div class="col-sm-6 text-lg-right">Grï¿½tis</div>
             </div>
             <div class="row">
-              <div class="col-sm-12">São Carlos, Brasil</div>
+              <div class="col-sm-12">Sï¿½o Carlos, Brasil</div>
             </div>
 
             <hr class="my-4">
@@ -117,5 +117,10 @@ export default {
 </script>
 
 <style scoped>
-
+  .carrinho{
+    background-image: url("~@/assets/Body/Background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 </style>
