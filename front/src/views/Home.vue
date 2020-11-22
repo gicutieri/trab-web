@@ -51,7 +51,6 @@ export default {
     Card
   },
   mounted() {
-    console.log(this.$store);
     this.$store.dispatch(FETCH_DESTAQUES);
   },
   computed: {
