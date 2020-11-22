@@ -2,13 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from "./store";
+import ApiService from "./common/api.service";
 
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 import './plugins/bootstrap-vue'
-import 'mutationobserver-shim'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+ApiService.init();
 
 new Vue({
   router,

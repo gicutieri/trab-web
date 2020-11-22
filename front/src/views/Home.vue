@@ -10,10 +10,8 @@
         </div>
       </div>
       <div class="row">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card v-for="(destaque, index) in destaques" :destaque="destaque" :key="index">
+        </Card>
       </div>
       <div class="row">
         <div class="shape">
@@ -43,7 +41,7 @@
 import { mapGetters } from "vuex";
 import Carousel from '@/components/Carousel.vue'
 import Card from '@/components/Card.vue'
-//import { FETCH_DESTAQUES } from "@/store/actions.type";
+import { FETCH_DESTAQUES } from "@/store/actions.type";
 
 export default {
   name: 'Home',
@@ -53,13 +51,10 @@ export default {
   },
   mounted() {
     console.log(this.$store);
-    //this.$store.dispatch(FETCH_DESTAQUES);
+    this.$store.dispatch(FETCH_DESTAQUES);
   },
   computed: {
-    ...mapGetters(["destaques"]),
-    destaque() {
-      return this.$route.params.tag;
-    }
+    ...mapGetters(["destaques"])
   }
 }
 </script>

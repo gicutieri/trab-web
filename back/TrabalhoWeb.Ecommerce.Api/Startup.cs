@@ -1,20 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TrabalhoWeb.Ecommerce.Api
 {
     public class Startup
     {
+        readonly string TrabalhoWebEcommerceApiOrigins = "_trabalhoWebEcommerceApiOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,10 +22,24 @@ namespace TrabalhoWeb.Ecommerce.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: TrabalhoWebEcommerceApiOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("http://localhost:8080",
+                                                          "http://localhost:8081",
+                                                          "http://localhost:8082",
+                                                          "https://hortifruti.giovannacutieri.repl.co")
+                                                            .AllowAnyHeader()
+                                                            .AllowAnyMethod();
+                                  });
+            });
+
             services.AddControllers();
 
-            services.AddSwaggerGen(c => {
+            services.AddSwaggerGen(c =>
+            {
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
@@ -53,8 +64,9 @@ namespace TrabalhoWeb.Ecommerce.Api
             }
 
             app.UseRouting();
-
             app.UseHttpsRedirection();
+
+            app.UseCors(TrabalhoWebEcommerceApiOrigins);
 
             app.UseAuthorization();
 
@@ -64,7 +76,8 @@ namespace TrabalhoWeb.Ecommerce.Api
             });
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "release/1.0.0");
             });
         }

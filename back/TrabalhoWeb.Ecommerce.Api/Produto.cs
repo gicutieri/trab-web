@@ -1,5 +1,3 @@
-using System;
-
 namespace TrabalhoWeb.Ecommerce.Api
 {
     public class Produto

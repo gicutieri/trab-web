@@ -17,7 +17,7 @@ const getters = {
     [FETCH_DESTAQUES]({ commit }) {
       return DestaquesService.get()
         .then(({ data }) => {
-          commit(SET_DESTAQUES, data.destaques);
+          commit(SET_DESTAQUES, data);
         })
         .catch(error => {
           throw new Error(error);
