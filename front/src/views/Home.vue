@@ -4,9 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="shape">
-          <div class="col-sm-6 marcado py-4">
-            <h2 class="shapecontent">DESTAQUES</h2> 
-          </div>
+          <h2 class="shapecontent">DESTAQUES</h2>
         </div>
       </div>
       <div class="row">
@@ -15,14 +13,17 @@
       </div>
       <div class="row">
         <div class="shape">
-          <div class="col-sm-6 marcado py-4">
-            <h2 class="shapecontent">ORIGEM</h2> 
-          </div>
+          <h2 class="shapecontent">ORIGEM</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12 py-5">
-          <img src="@/assets/Home/diagrama-cortado-removebg-preview.png" alt="diagrama da origem de nossos produtos, mostrando o caminho do produtor, transporte, canal de distribui��o e a chegada ao cliente." class="mximg-responsive center-block d-block mx-auto">
+          <img src="@/assets/Home/diagrama.svg" alt="diagrama da origem de nossos produtos, mostrando o caminho do produtor, transporte, canal de distribui��o e a chegada ao cliente." class="mximg-responsive center-block d-block img-fluid mx-auto">
+        </div>
+      </div>
+      <div class="row">
+        <div class="shape">
+          <h2 class="shapecontent">SOBRE NÓS</h2>
         </div>
       </div>
       <div class="row">

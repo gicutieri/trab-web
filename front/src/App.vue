@@ -41,8 +41,8 @@ export default {
     color: #385F47;
     font-size: 4vh;
     margin:auto;
-    line-height:20px;
-    position: absolute;
+    line-height:60px;
+    position: relative;
     text-align:center;
   }
   .searchbar{

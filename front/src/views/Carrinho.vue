@@ -3,8 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <div class="marcado py-4">
-            <h2>Meu Carrinho</h2>
+          <div class="row">
+            <div class="shape">
+              <h2 class="shapecontent">CARRINHO</h2>
+            </div>
           </div>
           <div class="container cart">
 
@@ -75,8 +77,10 @@
         </div>
 
         <div class="col-md-4">
-          <div class="marcado py-4">
-            <h2>Resumo</h2>
+          <div class="row">
+            <div class="shape">
+              <h2 class="shapecontent">RESUMO</h2>
+            </div>
           </div>
           <div class="container cart">
             <div class="row">

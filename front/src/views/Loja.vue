@@ -1,6 +1,12 @@
 <template>
   <div class="loja">
     <div class="container">
+      <div class="row">
+        <div class="shape">
+          <h2 class="shapecontent">LOJA</h2>
+        </div>
+      </div>
+      
       <!--
       <div class="marcado py-4 search-bar">
         <div class="row">
