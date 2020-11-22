@@ -24,8 +24,36 @@ export default {
     font-family: 'Montserrat', sans-serif;
     background-image: url("~@/assets/Body/Background.svg");
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
     background-size: cover;
     min-height: 1125px;
+    background-color: #819476;
   }
+  .shape{
+    background-color:#96744F;
+    width:100%;
+    height:60px;
+    position:relative;
+    margin: 10px;
+  }
+  .shapecontent{
+    color: #385F47;
+    font-size: 4vh;
+    margin:auto;
+    line-height:20px;
+    position: absolute;
+    text-align:center;
+  }
+  .searchbar{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .inline-block-child{
+    display: inline-block;
+  }
+  .but{
+    padding-top: 10px;
+  }
+  
 </style>

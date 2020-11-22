@@ -3,8 +3,10 @@
     <Carousel/>
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 marcado py-4">
-          <h2>Destaques</h2>
+        <div class="shape">
+          <div class="col-sm-6 marcado py-4">
+            <h2 class="shapecontent">DESTAQUES</h2> 
+          </div>
         </div>
       </div>
       <div class="row">
@@ -14,8 +16,10 @@
         <Card/>
       </div>
       <div class="row">
-        <div class="col-sm-6 marcado py-4">
-          <h2>Origem</h2>
+        <div class="shape">
+          <div class="col-sm-6 marcado py-4">
+            <h2 class="shapecontent">ORIGEM</h2> 
+          </div>
         </div>
       </div>
       <div class="row">

@@ -1,11 +1,13 @@
 <template>
   <div class="cadastro">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6 marcado py-4">
-                <h2>Cadastro</h2>
-            </div>
+      <div class="row">
+        <div class="shape">
+          <div class="col-sm-6 marcado py-4">
+            <h2 class="shapecontent">CADASTRO</h2> 
+          </div>
         </div>
+      </div>
 
         <form name="cadastro" class="form-horizontal" method="POST" onsubmit="event.preventDefault();">
 

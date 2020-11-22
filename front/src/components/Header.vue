@@ -59,15 +59,12 @@ export default {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
   }
-  .navbar-nav .nav-link {
+  .navbar-light .navbar-nav .nav-link {
     color: #AF7061;
-  }
-  .nav-item-dropdown {
-    color: #AF7061;
+    background: #325E47;
   }
   .navbar-light{
     background: #325E47;
-    color: #AF7061;
   }
   .img-logo{
     height: 50px;
