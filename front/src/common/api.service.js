@@ -49,9 +49,14 @@ const ApiService = {
 
 export default ApiService;
 
-
 export const DestaquesService = {
     get() {
         return ApiService.get("Destaques");
+    }
+}; 
+
+export const ProdutosService = {
+    get() {
+        return ApiService.get("Produtos");
     }
 }; 

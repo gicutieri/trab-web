@@ -1,10 +1,10 @@
 <template>  
     <div class="col-sm-3">
       <div class="card">
-        <img :src="'/imagens/abacate.jpg'" class="card-img-top" v-bind:alt="destaque.nome" />
+        <img :src="'/imagens/abacate.jpg'" class="card-img-top" v-bind:alt="produto.nome" />
         <div class="card-body">
-          <h3 class="card-title">{{ destaque.nome }}</h3>
-          <h5>{{ destaque.preco }} {{ destaque.descricao }}</h5>
+          <h3 class="card-title">{{ produto.nome }}</h3>
+          <h5>{{ produto.preco }} {{ produto.descricao }}</h5>
 
           <div id="buttons" class="but">
             <div align="center">
@@ -26,7 +26,7 @@
 export default {
   name: 'Card',
   props: {
-    destaque: { type: Object, required: true }
+    produto: { type: Object, required: true }
   },
   data: function () {
     return {
@@ -38,7 +38,7 @@ export default {
     let carrinho = this.recuperarCarrinho();
     
     carrinho.forEach(element => {
-      if (this.destaque.id == element.id) {
+      if (this.produto.id == element.id) {
         qtd = element.quantidade;
       }
     });
@@ -72,7 +72,7 @@ export default {
       
       carrinho.forEach(element => {
         count++;
-        if (this.destaque.id == element.id) {
+        if (this.produto.id == element.id) {
           element.quantidade = this.quantidade;
           foraDoCarrinho = 0;
           index = count;
@@ -84,8 +84,8 @@ export default {
       }
 
       if (foraDoCarrinho) {
-        this.destaque.quantidade = this.quantidade;
-        carrinho.push(this.destaque);
+        this.produto.quantidade = this.quantidade;
+        carrinho.push(this.produto);
       }
 
       this.salvarCarrinho(carrinho);

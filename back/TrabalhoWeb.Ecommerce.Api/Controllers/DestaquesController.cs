@@ -18,13 +18,14 @@ namespace TrabalhoWeb.Ecommerce.Api.Controllers
         [HttpGet]
         public IEnumerable<Produto> Get()
         {
-            _logger.LogDebug("Get");
+            _logger.LogDebug("DestaquesController - Get");
 
+            int count = 0;
             return new[] {
-                new Produto { Id = 1, Nome = "Abacate 1", Descricao = "Desc 1", Imagem = "/imagens/abacate.jpg", Preco = 1.11m },
-                new Produto { Id = 2, Nome = "Abacate 2", Descricao = "Desc 2", Imagem = "/imagens/abacate.jpg", Preco = 2.22m },
-                new Produto { Id = 3, Nome = "Abacate 3", Descricao = "Desc 3", Imagem = "/imagens/abacate.jpg", Preco = 3.33m },
-                new Produto { Id = 4, Nome = "Abacate 4", Descricao = "Desc 4", Imagem = "/imagens/abacate.jpg", Preco = 4.44m },
+                new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
+                new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
+                new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
+                new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
             };
         }
     }

@@ -4,37 +4,35 @@ import { SET_DESTAQUES } from "./mutations.type";
 
 const state = {
     destaques: [],
-    carrinho: [],
 }
 
 const getters = {
     destaques(state) {
-      return state.destaques;
+        return state.destaques;
     }
-  };
+};
 
-  const actions = {
+const actions = {
     [FETCH_DESTAQUES]({ commit }) {
-      return DestaquesService.get()
-        .then(({ data }) => {
-          commit(SET_DESTAQUES, data);
+        return DestaquesService.get()
+            .then(({ data }) => {
+            commit(SET_DESTAQUES, data);
         })
         .catch(error => {
-          throw new Error(error);
+            throw new Error(error);
         });
     }
-  };
+};
 
-  const mutations = {
+const mutations = {
     [SET_DESTAQUES](state, destaques) {
-      state.destaques = destaques;
+    state.destaques = destaques;
     }
-  };
+};
 
-  export default {
+export default {
     state,
     getters,
     actions,
     mutations
-  };
-  
+};

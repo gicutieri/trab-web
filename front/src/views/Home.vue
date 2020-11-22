@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="row">
-        <Card v-for="(destaque, index) in destaques" :destaque="destaque" :key="index">
+        <Card v-for="(produto, index) in destaques" :produto="produto" :key="index">
         </Card>
       </div>
       <div class="row">

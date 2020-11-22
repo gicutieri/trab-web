@@ -25,17 +25,8 @@
       </div>
 
       <div class="row">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
-
-      <div class="row">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <Card v-for="(produto, index) in produtos" :produto="produto" :key="index">
+        </Card>
       </div>
 
       <div id="buttons" class="but">
@@ -55,12 +46,20 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Card from '@/components/Card.vue'
+import { FETCH_PRODUTOS } from "@/store/actions.type";
 
 export default {
   name: 'Loja',
   components: {
     Card
+  },
+  mounted() {
+    this.$store.dispatch(FETCH_PRODUTOS);
+  },
+  computed: {
+    ...mapGetters(["produtos"])
   }
 }
 </script>
