@@ -1,4 +1,6 @@
-# front
+# SCC0219 - INTRODUÇÃO AO DESENVOLVIMENTO WEB
+
+## Grupo 3 - Tema: Hortifruti
 
 ## Project setup
 ```

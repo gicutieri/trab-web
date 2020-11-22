@@ -1,7 +1,6 @@
 <template>
   <div class="cadastro">
-    <body>
-            <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6 marcado py-4">
                 <h2>Cadastro</h2>
@@ -154,8 +153,6 @@
             </div>
         </form>
     </div>
-    </body>
-
   </div>
 </template>
 
@@ -167,11 +164,5 @@ export default {
 </script>
 
 <style scoped>
-body{
-    background-image: url("~@/assets/Body/Background.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1125px;
-  }
+
 </style>

@@ -1,61 +1,65 @@
 <template>
   <div class="home">
     <Carousel/>
-    <body>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 marcado py-4">
-            <h2>Destaques</h2>
-          </div>
-        </div>
-        <div class="row">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 marcado py-4">
-            <h2>Origem</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 py-5">
-            <img src="@/assets/Home/diagrama-cortado-removebg-preview.png" alt="diagrama da origem de nossos produtos, mostrando o caminho do produtor, transporte, canal de distribui��o e a chegada ao cliente." class="mximg-responsive center-block d-block mx-auto">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 py-5">
-            <p id="descricao-producao" class="justify-content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>      
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 marcado py-4">
+          <h2>Destaques</h2>
         </div>
       </div>
-    </body>
+      <div class="row">
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 marcado py-4">
+          <h2>Origem</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 py-5">
+          <img src="@/assets/Home/diagrama-cortado-removebg-preview.png" alt="diagrama da origem de nossos produtos, mostrando o caminho do produtor, transporte, canal de distribui��o e a chegada ao cliente." class="mximg-responsive center-block d-block mx-auto">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 py-5">
+          <p id="descricao-producao" class="justify-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>      
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Carousel from '@/components/Carousel.vue'
 import Card from '@/components/Card.vue'
+//import { FETCH_DESTAQUES } from "@/store/actions.type";
 
 export default {
   name: 'Home',
   components: {
     Carousel,
     Card
+  },
+  mounted() {
+    console.log(this.$store);
+    //this.$store.dispatch(FETCH_DESTAQUES);
+  },
+  computed: {
+    ...mapGetters(["destaques"]),
+    destaque() {
+      return this.$route.params.tag;
+    }
   }
 }
 </script>
 
 <style scoped>
-  body{
-    background-image: url("~@/assets/Body/Background.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1125px;
-  }
+
 </style>

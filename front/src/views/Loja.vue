@@ -1,7 +1,6 @@
 <template>
   <div class="loja">
-    <body>
-          <div class="container">
+    <div class="container">
       <div class="marcado py-4 search-bar">
         <div class="row">
           <input class="text-line search-bar" type="text" placeholder="search">
@@ -36,8 +35,6 @@
       </div>
 
     </div> <!-- <div class="container"> -->
-    </body>
-
   </div> <!-- <div class="loja"> -->
 </template>
 
@@ -53,11 +50,5 @@ export default {
 </script>
 
 <style scoped>
-  body{
-      background-image: url("~@/assets/Body/Background.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 1125px;
-    }
+
 </style>
