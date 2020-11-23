@@ -1,39 +1,80 @@
-<template>  
-    <div class="col-xl-3 col-md-6">
-      <div class="card">
-        <img :src="'/imagens/ABACATE.jpg'" class="card-img-top cardimagem" v-bind:alt="produto.nome" />
-        <div class="card-body cardfundo">
-          <h3 class="card-title cardtitle">{{ produto.nome }}</h3>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col" style="padding: 0px 5px">
-                <h5 class="precocard" style="font-family: Montserrat">{{ produto.preco }} {{ produto.descricao }}</h5>
-              </div>
-              <div class="col-6">
-                <div id="buttons">
-                  <div align="center">
-                    <button v-on:click="removerQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
-                      <span>-</span>
-                    </button>
-                    <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
-                    <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
-                      <span><i class="fa fa-arrow-right"></i>+</span>
-                    </button>
+<template>
+  <div v-bind:class="classCard">
+    <div v-if="this.type == 'resumido'" class="card">
+      <img :src="'/imagens/ABACATE.jpg'" class="card-img-top cardimagem" v-bind:alt="produto.nome" />
+      <div class="card-body cardfundo">
+        <h3 class="card-title cardtitle">{{ produto.nome }}</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col" style="padding: 0px 5px">
+              <h5 class="precocard" style="font-family: Montserrat">{{ produto.preco }} {{ produto.descricao }}</h5>
+            </div>
+            <div class="col-6">
+              <div id="buttons">
+                <div align="center">
+                  <button v-on:click="removerQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
+                    <span>-</span>
+                  </button>
+                  <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
+                  <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
+                    <span><i class="fa fa-arrow-right"></i>+</span>
+                  </button>
                 </div>
               </div>
-            </div>             
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
+
+    <div v-if="this.type == 'detalhado'" class="row">
+      <div class="col-sm-4">
+        <img src="/imagens/abacate.jpg" alt="foto do produto" class="card-img-top">
+      </div>
+      <div class="container col-sm-8">
+        <div class="row">
+          <div class="col-sm-6">{{ this.produto.nome }}</div>
+          <div class="col-sm-4">{{ this.produto.preco * this.produto.quantidade }}</div>
+          <div class="col-sm-2"><b-icon icon="trash-fill" variant="dark" aria-hidden="true">te</b-icon></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">{{ this.produto.preco }}</div>
+        </div><div class="row">
+          <div class="col-sm-12">
+            <div id="buttons">
+              <button v-on:click="removerQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
+                <span>-</span>
+              </button>
+              <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
+              <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
+                <span><i class="fa fa-arrow-right"></i>+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr v-if="this.type == 'detalhado'" class="my-4">
+
+  </div>
 </template>
 
 <script>
+import { BIcon } from 'bootstrap-vue'
+
 export default {
   name: 'Card',
+  components: {
+    'b-icon': BIcon,
+  },
   props: {
-    produto: { type: Object, required: true }
+    produto: { type: Object, required: true },
+    type: {
+      type: String,
+      required: false,
+      default: "resumido"
+    },
   },
   data: function () {
     return {
@@ -51,6 +92,15 @@ export default {
     });
 
     this.quantidade = qtd;
+  },
+  computed: {
+    classCard: function () {
+      return {
+        'col-xl-3': this.type == 'resumido',
+        'col-md-6': this.type == 'resumido',
+        'row': this.type == 'detalhado',
+      }
+    }
   },
   methods: {
     adicionarQuantidade: function () {
@@ -73,12 +123,10 @@ export default {
     },
     atualizarCarrinho: function() {
       let foraDoCarrinho = 1;
-      let count = -1;
       let index = -1;
       let carrinho = this.recuperarCarrinho();
       
-      carrinho.forEach(element => {
-        count++;
+      carrinho.forEach((element, count) => {
         if (this.produto.id == element.id) {
           element.quantidade = this.quantidade;
           foraDoCarrinho = 0;

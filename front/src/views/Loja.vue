@@ -25,8 +25,7 @@
       </div>
 
       <div class="row">
-        <Card v-for="(produto, index) in produtos" :produto="produto" :key="index">
-        </Card>
+        <Card v-for="(produto, index) in produtos" :produto="produto" :key="index"></Card>
       </div>
 
       <div id="buttons" class="but">
