@@ -48,7 +48,6 @@
       </div> <!-- <div class="row"> -->
     </div> <!-- <div class="container"> -->
   </div>
-
 </template>
 
 <script>
@@ -90,5 +89,7 @@ export default {
 </script>
 
 <style scoped>
-
+#finalizar{
+  margin-top: 5px;
+}
 </style>
