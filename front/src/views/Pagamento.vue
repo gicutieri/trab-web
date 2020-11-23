@@ -4,12 +4,12 @@
 
     <div class="row">
         <div class="shape">
-            <h2 class="shapecontent">CADASTRO</h2>
+            <h2 class="shapecontent">Escolha a forma de pagamento</h2>
         </div>
     </div>
 
 
-        <form name="cadastro" class="form-horizontal" method="POST" onsubmit="event.preventDefault();">
+        <form name="pagamento" class="form-horizontal" method="POST" onsubmit="event.preventDefault();">
 
             <fieldset>
                 <legend>DADOS PESSOAIS</legend>
@@ -135,16 +135,3 @@
     </div>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: 'Cadastro'
-}
-</script>
-
-<style scoped>
-.container{
-    padding: 10px;
-}
-</style>
