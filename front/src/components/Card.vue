@@ -6,7 +6,7 @@
         <h3 class="card-title cardtitle">{{ produto.nome }}</h3>
         <div class="container-fluid">
           <div class="row">
-            <div class="col" style="padding: 0px 5px">
+            <div class="col-6" style="padding: 0px 5px">
               <h5 class="precocard" style="font-family: Montserrat">{{ produto.preco }} {{ produto.descricao }}</h5>
             </div>
             <div class="col-6">
