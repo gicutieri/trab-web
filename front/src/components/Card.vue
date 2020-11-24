@@ -1,7 +1,7 @@
 <template>
   <div v-bind:class="classCard">
     <div v-if="this.type == 'resumido'" class="card">
-      <img :src="'/imagens/ABACATE.jpg'" class="card-img-top cardimagem" v-bind:alt="produto.nome" />
+      <img v-bind:src="produto.imagem" class="card-img-top cardimagem" v-bind:alt="produto.nome" />
       <div class="card-body cardfundo">
         <h3 class="card-title cardtitle">{{ produto.nome }}</h3>
         <div class="container-fluid">
@@ -17,7 +17,7 @@
                   </button>
                   <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
                   <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
-                    <span><i class="fa fa-arrow-right"></i>+</span>
+                    <span>+</span>
                   </button>
                 </div>
               </div>
