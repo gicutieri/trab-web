@@ -29,17 +29,17 @@ const routes = [
     meta: { title: 'Hortifruti - Carrinho' }
   },
   {
+    path: '/conta',
+    name: 'Conta',
+    component: () => import("@/views/Conta"),
+    meta: { title: 'Hortifruti - Conta' }
+  },
+  {
     path: '/cadastro',
     name: 'Cadastro',
     component: () => import("@/views/Cadastro"),
     meta: { title: 'Hortifruti - Cadastro' }
   },
-  {
-    path: '/minha-conta',
-    name: 'Minha-conta',
-    component: () => import("@/views/Minha-conta"),
-    meta: { title: 'Hortifruti - Minha Conta' }
-  }
 ]
 
 const router = new VueRouter({

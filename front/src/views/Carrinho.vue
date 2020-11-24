@@ -40,7 +40,7 @@
             </div>
             <div class="row justify-content-md-center">
               <div class="col-sm-12">
-                <button id="finalizar" type="button" class="btn btn-secondary btn-lg btn-block btn-outline-light">Finalizar Compra</button>
+                <button id="finalizar" @click="$router.push({ name: 'Pagamento' })" type="button" class="btn btn-secondary btn-lg btn-block btn-outline-light">Finalizar Compra</button>
               </div>
             </div>
           </div>
