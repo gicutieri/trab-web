@@ -33,6 +33,12 @@ const routes = [
     name: 'Cadastro',
     component: () => import("@/views/Cadastro"),
     meta: { title: 'Hortifruti - Cadastro' }
+  },
+  {
+    path: '/minha-conta',
+    name: 'Minha-conta',
+    component: () => import("@/views/Minha-conta"),
+    meta: { title: 'Hortifruti - Minha Conta' }
   }
 ]
 
