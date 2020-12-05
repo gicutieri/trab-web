@@ -1,4 +1,4 @@
-namespace TrabalhoWeb.Ecommerce.Api
+﻿namespace TrabalhoWeb.Ecommerce.Domain.Entidades
 {
     public class Produto
     {

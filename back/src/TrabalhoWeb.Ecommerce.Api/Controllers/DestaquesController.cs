@@ -1,32 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Swashbuckle.Swagger.Annotations;
 using System.Collections.Generic;
+using System.Net;
+using System.Web.Http;
+using System.Web.Http.Cors;
+using TrabalhoWeb.Ecommerce.Domain.Entidades;
 
 namespace TrabalhoWeb.Ecommerce.Api.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class DestaquesController : ControllerBase
+    [RoutePrefix("api/destaques")]
+    public class DestaquesController : ApiController
     {
-        private readonly ILogger<DestaquesController> _logger;
-
-        public DestaquesController(ILogger<DestaquesController> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpGet]
-        public IEnumerable<Produto> Get()
+        [EnableCors("*", "*", "*")]
+        [SwaggerResponse(HttpStatusCode.OK, "Buscar produtos.", typeof(IEnumerable<Produto>))]
+        [SwaggerResponse(HttpStatusCode.NotFound, "Não há produtos cadastrados.")]
+        [SwaggerResponse(HttpStatusCode.InternalServerError, "Ocorreu um erro não esperado.")]
+        public IHttpActionResult Get()
         {
-            _logger.LogDebug("DestaquesController - Get");
-
             int count = 0;
-            return new[] {
+            return Ok(new Produto[] {
                 new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
                 new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
                 new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
                 new Produto { Id = ++count, Nome = "Abacate " + count, Descricao = "Desc " + count, Imagem = "/imagens/abacate.jpg", Preco = count },
-            };
+            });
         }
     }
 }

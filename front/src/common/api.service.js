@@ -51,12 +51,12 @@ export default ApiService;
 
 export const DestaquesService = {
     get() {
-        return ApiService.get("Destaques");
+        return ApiService.get("Destaques/Get");
     }
 }; 
 
 export const ProdutosService = {
     get() {
-        return ApiService.get("Produtos");
+        return ApiService.get("Produtos/Get");
     }
 }; 
