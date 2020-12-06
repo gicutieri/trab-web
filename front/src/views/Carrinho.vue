@@ -2,19 +2,22 @@
   <div class="carrinho">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 carback">
-          <div class="row">
-            <div class="shape">
-              <h2 class="shapecontent">CARRINHO</h2>
+        <div class="col-md-8">
+          <div class="carback">
+            <div class="row">
+              <div class="shape">
+                <h2 class="shapecontent">CARRINHO</h2>
+              </div>
             </div>
-          </div>
-          <div class="container cart">
-            <Card v-for="(produto, index) in this.carrinho" :type="'detalhado'" :produto="produto" :key="index"></Card>
+            <div class="container cart">
+              <Card v-for="(produto, index) in this.carrinho" :type="'detalhado'" :produto="produto" :key="index"></Card>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-4 carback">
-          <div class="row">
+        <div class="col-md-4">
+          <div class="carback">
+                      <div class="row">
             <div class="shape">
               <h2 class="shapecontent">RESUMO</h2>
             </div>
@@ -44,6 +47,8 @@
               </div>
             </div>
           </div>
+          </div>
+
         </div>
       </div> <!-- <div class="row"> -->
     </div> <!-- <div class="container"> -->
@@ -94,8 +99,10 @@ export default {
 }
 .carback{
   background-color: rgba(255, 255, 255, 0.7);
+  /*border: 1px solid black;*/ 
   border-radius: 10px;
   margin-top: 5px;
-  padding-right: 2px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 </style>

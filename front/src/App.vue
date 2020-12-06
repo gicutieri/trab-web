@@ -55,5 +55,11 @@ export default {
   .but{
     padding-top: 10px;
   }
-  
+  .carousel-caption h3{
+    color:white;
+    background: rgba(70, 38, 38, 0.651);
+    font-size: 4vw;
+    margin-right: 7%;
+    margin-left: 7%;
+  }
 </style>
