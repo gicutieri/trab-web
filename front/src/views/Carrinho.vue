@@ -52,6 +52,7 @@
 
 <script>
 import Card from '@/components/Card.vue'
+import { mapGetters } from "vuex";
 
 export default {
   name: 'Carrinho',
@@ -60,30 +61,23 @@ export default {
   },
   data: function () {
     return {
-      carrinho: [],
       subTotal: 0,
       total: 0,
     }
   },
+  computed: {
+    ...mapGetters(["carrinho"]),
+  },
   mounted () {
-    this.carrinho = this.recuperarCarrinho();
+
+    this.subTotal = 0;
+    this.total = 0;
     
     this.carrinho.forEach(element => {
-      this.subTotal += element.preco * element.quantidade;
+      this.subTotal += element.Preco * element.Quantidade;
     });
 
     this.total = this.subTotal;
-  },
-  methods: {
-    recuperarCarrinho: function() {
-      let carrinho = [];
-
-      if (localStorage.getItem('carrinho')) {
-        carrinho = JSON.parse(localStorage.getItem('carrinho'));
-      }
-
-      return carrinho;
-    },
   },
 }
 </script>

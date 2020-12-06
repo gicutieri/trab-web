@@ -26,7 +26,7 @@ const actions = {
 
 const mutations = {
     [SET_DESTAQUES](state, destaques) {
-    state.destaques = destaques;
+        state.destaques = destaques;
     }
 };
 
