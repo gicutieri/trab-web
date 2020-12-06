@@ -45,6 +45,7 @@ export default {
     position: relative;
     text-align:center;
   }
+
   .searchbar{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -55,5 +56,23 @@ export default {
   .but{
     padding-top: 10px;
   }
-  
+  .carousel-caption h3{
+    color:white;
+    background: rgba(70, 38, 38, 0.651);
+    font-size: 4vw;
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+  .carback{
+  background-color: rgba(255, 255, 255, 0.7);
+  /*border: 1px solid black;*/ 
+  border-radius: 10px;
+  margin-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+legend *{
+    color: #AF7061;
+}
 </style>

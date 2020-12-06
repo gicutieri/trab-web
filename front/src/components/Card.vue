@@ -159,11 +159,14 @@ export default {
 .card {
   background-color: rgba(196, 196, 196, 0.7);
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .cardfundo {
   background: rgba(196, 196, 196, 0);
   border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .cardimagem {
@@ -183,5 +186,8 @@ export default {
 
 .margin-right-2 {
   margin-right: 2px;
+}
+.col{
+  padding-bottom: 5px;
 }
 </style>

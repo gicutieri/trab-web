@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <b-carousel
+     <b-carousel
       id="carousel-1"
       v-model="slide"
       :interval="4000"
@@ -9,19 +9,19 @@
       background="#ababab"
       img-width="1024"
       img-height="200"
+      style="    color:white;
+    background: rgba(70, 38, 38, 0.651);
+    font-size: 4vw;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide img-src="@/assets/Carousel/Home1.png">
-        <h1>PRODUÇÃO FAMILIAR</h1>
+      <b-carousel-slide class="row-12" caption="PRODUÇÃO FAMILIAR" img-src="@/assets/Carousel/Home1.png">
       </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/Carousel/Home2.png">
-        <h1>COLHIDOS COM AMOR</h1>
+      <b-carousel-slide  caption="COLHIDOS COM AMOR" img-src="@/assets/Carousel/Home2.png">
       </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/Carousel/Home3.png">
-        <h1>HIGIENIZADOS</h1>
+      <b-carousel-slide  caption="HIGIENIZADOS" img-src="@/assets/Carousel/Home3.png">
       </b-carousel-slide>
-    </b-carousel> -->
+    </b-carousel> 
   </div>
 </template>
 
@@ -32,10 +32,5 @@ export default {
 </script>
   
 <style scoped>
-  div.carousel-caption *{
-    color:white;
-    background: rgba(70, 38, 38, 0.651);
-    max-width: max-content;
-    font-size: 4vw;
-  }
+
 </style>

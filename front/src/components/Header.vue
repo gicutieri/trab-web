@@ -2,7 +2,7 @@
   <header>
     <div>
       <b-navbar toggleable="lg">
-        <b-navbar-brand href="#"><img src="@/assets/Header/LogoYBY.svg" class="img-logo" alt=""></b-navbar-brand>
+        <b-navbar-brand :to="{ name: 'Home' }"><img src="@/assets/Header/LogoYBY.svg" class="img-logo" alt=""></b-navbar-brand>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -17,12 +17,11 @@
             </b-navbar-nav>
 
             <b-nav-item-dropdown right>
-              <!-- Using 'button-content' slot -->
-              <template #button-content>
-                <img src="@/assets/Header/signvec.svg" alt="">
+              <template v-slot:button-content>
+                <img src="@/assets/Header/signvec.svg" class="imgsg" alt="">
               </template>
-              <b-dropdown-item :to="{name : 'Cadastro'}">Profile</b-dropdown-item>
-              <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+              <b-dropdown-item :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
+              <b-dropdown-item :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
@@ -56,7 +55,7 @@ export default {
 
 <style scoped>
   .nav-item{
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Montserrat', sans-serif;
   }
   .navbar-light .navbar-nav .nav-link {
@@ -67,13 +66,16 @@ export default {
     background: #325E47;
   }
   .img-logo{
-    height: 50px;
+    height: 70px;
     padding-bottom: 0;
     padding-top: 0;
   }
+  .navbar-toggler{
+    font-size: 1.75rem;
+  }
   .navbar-brand {
     display: inline-block;
-    max-width:50px;
+    max-width:60px;
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 1rem;
@@ -87,4 +89,13 @@ export default {
       margin-right : 1em;
     }
   }
+  .imgsg{
+    height: 25px;
+    margin: auto;
+  }
+  .row{
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
 </style>
