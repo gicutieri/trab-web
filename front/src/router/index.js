@@ -46,6 +46,12 @@ const routes = [
     component: () => import("@/views/Minha-conta"),
     meta: { title: 'Hortifruti - Minha Conta' }
   },
+  {
+    path: '/pagamento',
+    name: 'Pagamento',
+    component: () => import("@/views/Pagamento"),
+    meta: { title: 'Hortifruti - Pagamento' }
+  }
 ]
 
 const router = new VueRouter({
