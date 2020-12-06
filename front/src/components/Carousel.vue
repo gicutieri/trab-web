@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <b-carousel
+     <b-carousel
       id="carousel-1"
       v-model="slide"
       :interval="4000"
@@ -21,7 +21,7 @@
       <b-carousel-slide img-src="@/assets/Carousel/Home3.png">
         <h1>HIGIENIZADOS</h1>
       </b-carousel-slide>
-    </b-carousel> -->
+    </b-carousel> 
   </div>
 </template>
 

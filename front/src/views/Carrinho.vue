@@ -2,7 +2,7 @@
   <div class="carrinho">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 carback">
           <div class="row">
             <div class="shape">
               <h2 class="shapecontent">CARRINHO</h2>
@@ -13,7 +13,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 carback">
           <div class="row">
             <div class="shape">
               <h2 class="shapecontent">RESUMO</h2>
@@ -91,5 +91,11 @@ export default {
 <style scoped>
 #finalizar{
   margin-top: 5px;
+}
+.carback{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  margin-top: 5px;
+  padding-right: 2px;
 }
 </style>

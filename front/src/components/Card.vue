@@ -179,15 +179,21 @@ text-align: center;
 color: #AF7061;
 }
 .card{
-  background-color: rgba(196, 196, 196, 0.7);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .cardfundo{
   background: rgba(196, 196, 196, 0);
   border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .cardimagem{
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 10px;
+}
+.col{
+  padding-bottom: 5px;
 }
 </style>
