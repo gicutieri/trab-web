@@ -1,13 +1,13 @@
 <template>
   <div v-bind:class="classCard">
     <div v-if="this.type == 'resumido'" class="card">
-      <img v-bind:src="produto.imagem" class="card-img-top cardimagem" v-bind:alt="produto.nome" />
+      <img v-bind:src="produto.Imagem" class="card-img-top cardimagem" v-bind:alt="produto.Nome" />
       <div class="card-body cardfundo">
-        <h3 class="card-title cardtitle">{{ produto.nome }}</h3>
+        <h3 class="card-title cardtitle">{{ produto.Nome }}</h3>
         <div class="container-fluid">
           <div class="row">
             <div class="col-6" style="padding: 0px 5px">
-              <h5 class="precocard" style="font-family: Montserrat">{{ produto.preco }} {{ produto.descricao }}</h5>
+              <h5 class="precocard" style="font-family: Montserrat">{{ produto.Preco }} {{ produto.Descricao }}</h5>
             </div>
             <div class="col-6">
               <div id="buttons">
@@ -15,7 +15,7 @@
                   <button v-on:click="removerQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
                     <span>-</span>
                   </button>
-                  <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
+                  <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ Quantidade }} </button>
                   <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
                     <span>+</span>
                   </button>
@@ -33,19 +33,19 @@
       </div>
       <div class="container col-sm-8">
         <div class="row">
-          <div class="col-sm-6">{{ this.produto.nome }}</div>
-          <div class="col-sm-4">{{ this.produto.preco * this.produto.quantidade }}</div>
+          <div class="col-sm-6">{{ this.produto.Nome }}</div>
+          <div class="col-sm-4">{{ this.produto.Preco * this.produto.Quantidade }}</div>
           <div class="col-sm-2"><b-icon icon="trash-fill" variant="dark" aria-hidden="true">te</b-icon></div>
         </div>
         <div class="row">
-          <div class="col-sm-12">{{ this.produto.preco }}</div>
+          <div class="col-sm-12">{{ this.produto.Preco }}</div>
         </div><div class="row">
           <div class="col-sm-12">
             <div id="buttons">
               <button v-on:click="removerQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
                 <span>-</span>
               </button>
-              <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ quantidade }} </button>
+              <button class="btn btn-sm btn-outline-dark inline-block-child"> {{ Quantidade }} </button>
               <button v-on:click="adicionarQuantidade()" class="btn btn-sm btn-outline-dark inline-block-child">
                 <span><i class="fa fa-arrow-right"></i>+</span>
               </button>
@@ -78,7 +78,7 @@ export default {
   },
   data: function () {
     return {
-      quantidade: 0
+      Quantidade: 0
     }
   },
   mounted () {
@@ -86,12 +86,13 @@ export default {
     let carrinho = this.recuperarCarrinho();
     
     carrinho.forEach(element => {
-      if (this.produto.id == element.id) {
-        qtd = element.quantidade;
+      if (this.produto.Id == element.Id) {
+        console.log('entrei');
+        qtd = element.Quantidade;
       }
     });
 
-    this.quantidade = qtd;
+    this.Quantidade = qtd;
   },
   computed: {
     classCard: function () {
@@ -104,12 +105,12 @@ export default {
   },
   methods: {
     adicionarQuantidade: function () {
-      this.quantidade += 1;
+      this.Quantidade += 1;
       this.atualizarCarrinho();
     },
     removerQuantidade: function () {
-      if (this.quantidade == 0) return;
-      this.quantidade -= 1;
+      if (this.Quantidade == 0) return;
+      this.Quantidade -= 1;
       this.atualizarCarrinho();
     },
     recuperarCarrinho: function() {
@@ -127,19 +128,19 @@ export default {
       let carrinho = this.recuperarCarrinho();
       
       carrinho.forEach((element, count) => {
-        if (this.produto.id == element.id) {
-          element.quantidade = this.quantidade;
+        if (this.produto.Id == element.Id) {
+          element.Quantidade = this.Quantidade;
           foraDoCarrinho = 0;
           index = count;
         }
       });
 
-      if (index > -1 && this.quantidade == 0){
+      if (index > -1 && this.Quantidade == 0){
         carrinho.splice(index, 1);
       }
 
       if (foraDoCarrinho) {
-        this.produto.quantidade = this.quantidade;
+        this.produto.Quantidade = this.Quantidade;
         carrinho.push(this.produto);
       }
 
