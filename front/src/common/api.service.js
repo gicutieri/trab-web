@@ -18,13 +18,13 @@ const ApiService = {
 
     query(resource, params) {
         return Vue.axios.get(resource, params).catch(error => {
-        throw new Error(`[RWV] ApiService ${error}`);
+        throw new Error(`ApiService ${error}`);
         });
     },
 
     get(resource, slug = "") {
         return Vue.axios.get(`${resource}/${slug}`).catch(error => {
-        throw new Error(`[RWV] ApiService ${error}`);
+        throw new Error(`ApiService ${error}`);
         });
     },
 
@@ -42,21 +42,21 @@ const ApiService = {
 
     delete(resource) {
         return Vue.axios.delete(resource).catch(error => {
-        throw new Error(`[RWV] ApiService ${error}`);
+        throw new Error(`ApiService ${error}`);
         });
     }
 };
 
 export default ApiService;
 
-export const DestaquesService = {
+export const DestaqueService = {
     get() {
-        return ApiService.get("Destaques/Get");
+        return ApiService.get("Destaque/Get");
     }
 }; 
 
-export const ProdutosService = {
+export const ProdutoService = {
     get() {
-        return ApiService.get("Produtos/Get");
+        return ApiService.get("Produto/Get");
     }
 }; 

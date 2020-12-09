@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12">{{ this.produto.Preco }}</div>
+            <div class="col-sm-12">{{ this.produto.Preco }} {{ this.produto.Descricao }} </div>
           </div><div class="row">
             <div class="col-sm-12">
               <div id="buttons">

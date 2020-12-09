@@ -47,6 +47,12 @@ const routes = [
     meta: { title: 'Hortifruti - Minha Conta' }
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import("@/views/Login"),
+    meta: { title: 'Hortifruti - Login' }
+  },
+  {
     path: '/pagamento',
     name: 'Pagamento',
     component: () => import("@/views/Pagamento"),

@@ -16,7 +16,7 @@
       </div>
       -->
       <div class="input-group searchbar">
-        <input type="text" class="form-control" placeholder="PROCURE NO SITE">
+        <input type="text" class="form-control" placeholder="PROCURE NO SITE" v-model="filtro">
         <div class="input-group-append">
           <button class="btn btn-secondary" style="background-color:#96744F;" type="button">
           <img src="@/assets/Header/Lupa.svg" style="max-height: 23px" alt="">
@@ -25,7 +25,7 @@
       </div>
 
       <div class="row">
-        <Card v-for="(produto, index) in produtos" :produto="produto" :key="index"></Card>
+        <Card v-for="(produto, index) in filteredList" :produto="produto" :key="index"></Card>
       </div>
 
       <div id="buttons" class="but">
@@ -54,11 +54,21 @@ export default {
   components: {
     Card
   },
+  data: function () {
+    return {
+      filtro: '',
+    }
+  },
   mounted() {
     this.$store.dispatch(FETCH_PRODUTOS);
   },
   computed: {
-    ...mapGetters(["produtos"])
+    ...mapGetters(["produtos"]),
+    filteredList() {
+      return this.produtos.filter(produto => {
+        return produto.Nome.toLowerCase().includes(this.filtro.toLowerCase())
+      })
+    }
   }
 }
 </script>

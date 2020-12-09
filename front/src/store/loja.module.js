@@ -1,4 +1,4 @@
-import { ProdutosService } from "@/common/api.service";
+import { ProdutoService } from "@/common/api.service";
 import { FETCH_PRODUTOS } from "./actions.type";
 import { SET_PRODUTOS } from "./mutations.type";
 
@@ -14,7 +14,7 @@ const getters = {
 
 const actions = {
     [FETCH_PRODUTOS]({ commit }) {
-        return ProdutosService.get()
+        return ProdutoService.get()
             .then(({ data }) => {
             commit(SET_PRODUTOS, data);
         })

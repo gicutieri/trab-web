@@ -36,6 +36,7 @@
       <HintPath>..\..\..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\AuthRepositorio.cs" />
+    <Compile Include="Repositorios\ProdutoRepositorio.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Domain.csproj">
       <Project>{620d899e-41b7-40b1-a762-fd1deb1c9bbc}</Project>

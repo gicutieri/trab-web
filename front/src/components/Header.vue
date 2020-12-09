@@ -20,8 +20,10 @@
               <template v-slot:button-content>
                 <img src="@/assets/Header/signvec.svg" class="imgsg" alt="">
               </template>
-              <b-dropdown-item :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
-              <b-dropdown-item :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
+              <b-dropdown-item v-if="!isAuthenticated" :to="{name : 'Login'}">LOGIN</b-dropdown-item>
+              <b-dropdown-item v-if="!isAuthenticated" :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
+              <b-dropdown-item v-if="isAuthenticated" :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
+              <b-dropdown-item v-if="isAuthenticated" @click="logout">LOGOUT</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
@@ -31,6 +33,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import { LOGOUT } from "@/store/actions.type";
 import { 
     BNavbar, BNavbarBrand,
     BNavbarToggle, BCollapse, 
@@ -49,6 +53,16 @@ export default {
     'b-nav-item': BNavItem,
     'b-nav-item-dropdown': BNavItemDropdown,
     'b-dropdown-item': BDropdownItem
+  },
+  computed: {
+    ...mapGetters(["isAuthenticated"])
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch(LOGOUT).then(() => {
+        this.$router.push({ name: "Home" });
+      });
+    }
   }
 }
 </script>

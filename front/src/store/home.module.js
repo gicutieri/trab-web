@@ -1,4 +1,4 @@
-import { DestaquesService } from "@/common/api.service";
+import { DestaqueService } from "@/common/api.service";
 import { FETCH_DESTAQUES } from "./actions.type";
 import { SET_DESTAQUES } from "./mutations.type";
 
@@ -14,7 +14,7 @@ const getters = {
 
 const actions = {
     [FETCH_DESTAQUES]({ commit }) {
-        return DestaquesService.get()
+        return DestaqueService.get()
             .then(({ data }) => {
             commit(SET_DESTAQUES, data);
         })
