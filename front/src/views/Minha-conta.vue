@@ -1,12 +1,12 @@
 <template>
     <div class="minha-conta">
         <div class="container">
+            
             <div class="row">
                 <div class="shape">
                     <h2 class="shapecontent">MINHA CONTA</h2>
                 </div>
             </div>
-            <div name="dados">
 
                 <div class="fundobranco">
                     <fieldset>
@@ -141,7 +141,7 @@
                         </div>
                     </fieldset>           
                 </div>    
-            </div> <!--div dados-->
+
         </div>
     </div>
 </template>
@@ -168,7 +168,7 @@ legend{
     background-color:#385f47;
 }
 label{
-    padding-left: 5px;
+    padding-left: 0px;
     color: #385f47;
     font-size: 20px;
 }
