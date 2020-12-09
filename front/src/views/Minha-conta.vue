@@ -159,6 +159,9 @@ export default {
     border-radius: 10px;
     padding: 5px;
 }
+.container{
+    padding: 10px;
+}
 legend{
     color: #AF7061;
     padding-left: 5px;

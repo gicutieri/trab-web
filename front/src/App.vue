@@ -80,4 +80,12 @@ a.dropdown-item {
     color: #AF7061;
     font-size: 20px;
 }
+a.dropdown-item:hover {
+    background-color: #325E47;
+}
+.fundobranco{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+}
 </style>
