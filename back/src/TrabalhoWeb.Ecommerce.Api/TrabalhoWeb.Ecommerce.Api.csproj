@@ -198,6 +198,8 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\grupo-3-hortifruti - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\grupo-3-hortifruti - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\grupo-3-hortifrutiback - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\grupo-3-hortifrutiback - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
