@@ -155,7 +155,7 @@ export default {
 
 <style scoped>
 .fundobranco{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     padding: 5px;
 }
@@ -168,5 +168,10 @@ label{
     padding-left: 5px;
     color: #385f47;
     font-size: 20px;
+}
+p{
+    padding-left: 5px;
+    font-size: 15px;
+    background-color: whitesmoke;
 }
 </style>

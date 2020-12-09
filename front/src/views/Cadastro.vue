@@ -156,7 +156,7 @@ export default {
     padding: 10px;
 }
 .fundobranco{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     padding: 5px;
 }
