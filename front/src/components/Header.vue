@@ -20,8 +20,8 @@
               <template v-slot:button-content>
                 <img src="@/assets/Header/signvec.svg" class="imgsg" alt="">
               </template>
-              <b-dropdown-item :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
-              <b-dropdown-item :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
+              <b-dropdown-item class="dpitem" :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
+              <b-dropdown-item class="dpitem" :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>
         </b-collapse>
@@ -93,9 +93,7 @@ export default {
     height: 25px;
     margin: auto;
   }
-  .row{
-    margin-right: -20px;
-    margin-left: -20px;
-}
+
+  
 
 </style>

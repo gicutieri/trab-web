@@ -157,7 +157,7 @@ export default {
 }
 
 .card {
-  background-color: rgba(196, 196, 196, 0.7);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   margin-bottom: 10px;
 }

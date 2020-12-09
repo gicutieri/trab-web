@@ -72,7 +72,12 @@ export default {
   padding-left: 5px;
   padding-bottom: 10px;
 }
-legend *{
+.dropdown-menu.show {
+    display: block;
+    background-color: #325E47;
+}
+a.dropdown-item {
     color: #AF7061;
+    font-size: 20px;
 }
 </style>
