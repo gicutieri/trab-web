@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style scoped>
-
+.dropdown-item {
+    color: #AF7061;
+}
 </style>

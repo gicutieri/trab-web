@@ -107,9 +107,5 @@ export default {
     height: 25px;
     margin: auto;
   }
-  .row{
-    margin-right: -20px;
-    margin-left: -20px;
-}
 
 </style>

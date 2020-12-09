@@ -63,6 +63,9 @@ export default {
  .footer{
     background: #325E47;
  }
+ .dropdown-item {
+    color: #AF7061;
+}
  .footer-top { padding: 60px 0; background:#325E47; text-align: left; color: #aaa; font-family: 'Montserrat', sans-serif; }
 .footer-top h3 { padding-bottom: 10px; color: #fff; }
 
