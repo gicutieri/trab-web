@@ -3,7 +3,11 @@
         <div class="container page">
             <div class="row">
                 <div class="col-md-6 offset-md-3 col-xs-12">
-                    <h1 class="text-center white">Sign in</h1>
+                    <div class="row">
+                      <div class="shape">
+                        <h2 class="shapecontent">SIGN IN</h2>
+                      </div>
+                    </div>
                     <p class="text-center">
                         <router-link :to="{ name: 'Cadastro' }" class="white">
                         Não tem conta ainda?
@@ -29,7 +33,7 @@
                             placeholder="Password"
                             />
                         </fieldset>
-                        <button class="btn btn-lg btn-primary pull-right">
+                        <button class="btn btn-lg btn-secondary pull-right">
                             Entrar
                         </button>
                     </form>
@@ -75,5 +79,9 @@ export default {
 
 .white {
     color: white;
+}
+.error-messages{
+  color:white;
+  font-size: 25px;
 }
 </style>
