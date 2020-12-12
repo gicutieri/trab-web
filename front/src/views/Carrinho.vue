@@ -99,4 +99,7 @@ export default {
   padding-right: 5px;
   padding-left: 5px;
 }
+.cart{
+  font-family: 25px;
+}
 </style>
