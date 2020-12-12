@@ -23,6 +23,7 @@
               <b-dropdown-item v-if="!isAuthenticated" :to="{name : 'Login'}">LOGIN</b-dropdown-item>
               <b-dropdown-item v-if="!isAuthenticated" :to="{name : 'Cadastro'}">CADASTRO</b-dropdown-item>
               <b-dropdown-item v-if="isAuthenticated" :to="{name : 'Minha-conta'}">MINHA CONTA</b-dropdown-item>
+              <b-dropdown-item v-if="isAuthenticated" :to="{name : 'Novos-Produtos'}">ADICIONAR PRODUTOS</b-dropdown-item>
               <b-dropdown-item v-if="isAuthenticated" @click="logout">LOGOUT</b-dropdown-item>
             </b-nav-item-dropdown>
           </b-navbar-nav>

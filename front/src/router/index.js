@@ -8,55 +8,61 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import("@/views/Home"),
-    meta: { title: 'Hortifruti - Home' }
+    meta: { title: 'YBY - Home' }
   },
   {
     path: '/loja',
     name: 'Loja',
     component: () => import("@/views/Loja"),
-    meta: { title: 'Hortifruti - Loja' }
+    meta: { title: 'YBY - Loja' }
   },
   {
     path: '/sobre',
     name: 'Sobre',
     component: () => import("@/views/Sobre"),
-    meta: { title: 'Hortifruti - Sobre' }
+    meta: { title: 'YBY - Sobre' }
   },
   {
     path: '/carrinho',
     name: 'Carrinho',
     component: () => import("@/views/Carrinho"),
-    meta: { title: 'Hortifruti - Carrinho' }
+    meta: { title: 'YBY - Carrinho' }
   },
   {
     path: '/conta',
     name: 'Conta',
     component: () => import("@/views/Conta"),
-    meta: { title: 'Hortifruti - Conta' }
+    meta: { title: 'YBY - Conta' }
   },
   {
     path: '/cadastro',
     name: 'Cadastro',
     component: () => import("@/views/Cadastro"),
-    meta: { title: 'Hortifruti - Cadastro' }
+    meta: { title: 'YBY - Cadastro' }
   },
   {
     path: '/minha-conta',
     name: 'Minha-conta',
     component: () => import("@/views/Minha-conta"),
-    meta: { title: 'Hortifruti - Minha Conta' }
+    meta: { title: 'YBY - Minha Conta' }
   },
   {
     path: '/login',
     name: 'Login',
     component: () => import("@/views/Login"),
-    meta: { title: 'Hortifruti - Login' }
+    meta: { title: 'YBY - Login' }
+  },
+  {
+    path: '/novosprodutos',
+    name: 'Novos-Produtos',
+    component: () => import("@/views/Novos-Produtos"),
+    meta: { title: 'YBY - Novos Produtos' }
   },
   {
     path: '/pagamento',
     name: 'Pagamento',
     component: () => import("@/views/Pagamento"),
-    meta: { title: 'Hortifruti - Pagamento' }
+    meta: { title: 'YBY - Pagamento' }
   }
 ]
 

@@ -190,4 +190,12 @@ export default {
 .col{
   padding-bottom: 5px;
 }
+
+h3.card-body.cardtitle{
+  font-size: 30px;
+}
+
+h5.precocard{
+  font-family: 'Montserrat', sans-serif;
+}
 </style>
