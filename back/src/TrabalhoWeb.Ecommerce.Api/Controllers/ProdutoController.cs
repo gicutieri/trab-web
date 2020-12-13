@@ -22,6 +22,7 @@ namespace TrabalhoWeb.Ecommerce.Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [EnableCors("*", "*", "*")]
         [SwaggerResponse(HttpStatusCode.OK, "Buscar produtos.", typeof(IEnumerable<Produto>))]
         [SwaggerResponse(HttpStatusCode.NotFound, "Não há produtos cadastrados.")]
