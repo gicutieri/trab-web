@@ -17,6 +17,7 @@ namespace TrabalhoWeb.Ecommerce.Crosscutting.Ioc
         {
             container.Register<IAuthService, AuthService>(Lifestyle.Scoped);
             container.Register<IProdutoService, ProdutoService>(Lifestyle.Scoped);
+            container.Register<IUsuarioService, UsuarioService>(Lifestyle.Scoped);
             container.Register<IJwtService, JwtService>(Lifestyle.Scoped);
         }
 
@@ -24,6 +25,7 @@ namespace TrabalhoWeb.Ecommerce.Crosscutting.Ioc
         {
             container.Register<IAuthRepositorio, AuthRepositorio>(Lifestyle.Scoped);
             container.Register<IProdutoRepositorio, ProdutoRepositorio>(Lifestyle.Scoped);
+            container.Register<IUsuarioRepositorio, UsuarioRepositorio>(Lifestyle.Scoped);
         }
     }
 }
